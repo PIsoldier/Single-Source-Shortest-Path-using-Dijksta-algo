@@ -1,0 +1,24 @@
+Complexity: O(VlogV + E)
+
+Dijkstra(adj, starting_node)
+ Q := priority_queue()
+ for i := 1 to nodes 
+    dist := infinity
+ Q.enqueue(source)
+ dist[starting_node] = 0
+ 
+ while Q is not empty
+   u := nodes in Q with minimum distance[]
+   remove u from the Q
+   
+  if visit[u] = true then continue
+  for all edges from u to v in adj.adjacenctEdges(v) do
+      v := u's adjacent node
+      w := u's adjacent weight
+    if visit[v] = not true and dist[u] + w < dist[v] then
+        dist[v] := dist[u] + w
+        Q.enqueue(weight)
+        end if
+     end for
+    visit[u] := true
+  end while 
